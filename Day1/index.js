@@ -38,12 +38,12 @@ var v = 6;
 {
     let l = 10;
     var v = 20;
-    console.log("Inside block, l:", l); 
-    console.log("Inside block, v:", v); 
+    console.log("Inside block, l:", l); //10
+    console.log("Inside block, v:", v); //20
 }
 
-console.log("Outside block, l:", l); 
-console.log("Outside block, v:", v);
+console.log("Outside block, l:", l); //12
+console.log("Outside block, v:", v);//20
 
 let i = 0;
 let j = 1;
@@ -51,7 +51,7 @@ let j = 1;
 if(i > j) {
     console.log("i is greater");
 } else {
-    console.log("j is greater");
+    console.log("j is greater");//prints
 }
 
 let choice = "A";
