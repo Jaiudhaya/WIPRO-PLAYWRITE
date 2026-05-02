@@ -19,7 +19,7 @@ console.log(getHighNumber(arr));
 
 //Price Calculator
 let prices=["200","50","20","23"];
-let handling=prices.splice(-1)[0];
+let handling=prices.pop();
 let numbers=prices.map(price=>Number(price));
 let sum=(arr)=>{
     let total=0;
