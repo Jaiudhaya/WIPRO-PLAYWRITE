@@ -18,3 +18,21 @@ console.log(`Sum of x&y:${sum(5,10)}`);
 
 let arr=[1,2,3,5,"Jai"];
 arr.filter(x => typeof x === "number").map(y => y*2).forEach(a => console.log("Element after x2:", a*2));
+
+//array fns
+colors = ["Black","White","Brown"];
+colors.unshift("Red");
+console.log(colors);
+colors.shift();
+console.log(colors);
+colors.push("Pink");
+console.log(colors);
+colors.pop();
+console.log(colors);
+console.log(colors.length);
+console.log(colors.includes("Purple"));
+console.log(colors.indexOf("Purple"));
+console.log(colors[3]);
+console.log(colors[2]);
+console.log(colors[colors.length-1]);
+console.log(colors)
