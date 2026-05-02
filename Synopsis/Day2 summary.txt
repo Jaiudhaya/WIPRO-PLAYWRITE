@@ -1,0 +1,51 @@
+Version js: ec6 => ECMAScript (contains almost everything)
+
+Tempalte Literals:
+    eg:
+    let a ="jai"
+    let b="Anna"
+    let c="Jack"
+    let e = `Hello ${a}, ${b} and ${c}`;
+    console.log(e);
+    
+    o/p: Hello jai, Anna and Jack
+
+Arrow Fnc:
+    eg:
+    let sum=(x,y)=>x+y
+    console.log(sum(5,10))
+
+Map function:
+    eg:
+    arr.map(x => x*5);
+
+Filter function:
+    eg:
+    arr.filter(x => typeof(x) === "number") (filter out the irrelvent values)
+
+Generate Random Value:
+    eg:
+    Math.random() * 100 //0-100
+
+Floor:
+    eg:
+    Math.floor(Math.random()*10)+1
+
+Ceil:
+    eg:
+    Math.ceil(Math.random()*100)
+
+TypeCasting:
+    eg:
+    parseInt(val)
+
+
+Arrays:
+    eg:
+    arr.indexOf("val") //returns index
+    arr.includes("val") //returns boolean value
+    arr.length
+    arr.push(val)
+    ar.pop()
+    arr.unshift() //add in the beginning
+    arr.shift() //removes from the beginning
