@@ -49,3 +49,34 @@ Arrays:
     ar.pop()
     arr.unshift() //add in the beginning
     arr.shift() //removes from the beginning
+
+Reduce: (accommodate,current)
+    let price=['10','20','30',40']    
+    const total = prices.reduce((acc, curr) => { return acc + curr }, 0);
+                                                        acc          curr
+    // 0 + 10 = 10
+    // 10 + 20 = 30
+    // 30 + 30 = 60
+    // 60 + 40 = 100
+    console.log(total)
+
+Login Page Attempt:
+
+1. Login.html:
+    -Login page with Username and password 
+    -Submit button triggers an alert msg (js used)
+    -Successful login takes you to another html file (sample.html)
+
+2.Login.css:
+    -Color was added to h1, p, button
+    -Button was added with 'cursor' option
+
+3.Login.js:
+    -used getElementById for getting value from inputbox
+    -Used if condition for checking the username and password
+    -if successful, alert msg is triggered and which takes us to another html file(sample)-> window.location.href = "sample.html";
+    -if unsuccessful -> invalid trigger msg
+
+4.sample.html:
+    -just a landing page eg
+    -has a link to go back to login page
