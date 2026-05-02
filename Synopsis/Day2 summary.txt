@@ -80,3 +80,24 @@ Login Page Attempt:
 4.sample.html:
     -just a landing page eg
     -has a link to go back to login page
+
+SPLICE:
+    eg:const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+console.log(months.splice(2, 3, 'Aaryan')); 
+console.log(months);
+
+o/p:  
+[ 'March', 'April', 'May' ]
+[
+  'January',   'February',
+  'Aaryan',    'June',
+  'July',      'August',
+  'September', 'October',
+  'November',  'December'
+]
+
+splice(a,b,c)
+a->index
+b->no of elements
+c->replaced in place of a-b
+
