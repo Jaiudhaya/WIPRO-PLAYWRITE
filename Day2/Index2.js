@@ -36,3 +36,15 @@ console.log(colors[3]);
 console.log(colors[2]);
 console.log(colors[colors.length-1]);
 console.log(colors)
+
+//reduce
+const list=['10','20','30','40'];
+const total = list.reduce((acc,curr)=>{return acc + curr},0);
+console.log(total);
+
+const fruitBasket = ['apple', 'banana', 'cherry', 'apple', 'apple', 'banana', 'pineapple'];
+const count=fruitBasket.reduce((acc,fruit)=>{
+    acc[fruit]=(acc[fruit]||0)+1;
+    return acc;
+},{});
+console.log(count);
