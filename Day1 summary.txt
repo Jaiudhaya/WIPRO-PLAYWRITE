@@ -1,0 +1,81 @@
+JavaScript(Brain)
+    -complier
+    -High level 
+    -for functionality
+
+Declaration -> let/var
+Initialization -> assign values
+
+NodeJs -> Runtime of JavaScript
+    -executes js directly in OS
+    -so that it works in servers(local sys)
+    -OS level packages(OS can see, memory..)
+
+URL -> Uniform Resource Locator
+Domain -> Unique
+Endpoint -> carries resources
+eg: https://jsonplaceholder.typical.com/todos/1
+                domain                  Endpoint
+
+
+JSON -> JavaScript Object Notation
+    -key:value pair
+
+Client-Server arch:
+
+                    req HTTP
+            O   ------------>  REST Server
+                <------------  
+                    response
+
+=>> Once request is made and received response then connection is closed!!
+=>> req: GET,POST,PUT,DELETE,PATCH,UPDATE(CRUD)
+
+    -3states:
+        -Pending
+        -Successful
+        -Failed(error 404,500,204,208...)
+
+OPERATIONS:
+
+Type fns: typeof(...)
+
+Math:
+Add: a+b
+Sub: a-b
+mul/prod: a*b
+divis: a/b
+remainder: a%b(modulo)
+
+String:
+
+Length: str.length
+Uppercase: str.toUpperCase()
+Lower: str.toLowerCase()
+substring: str.substring(0,4)
+
+Logical:
+
+Greater: a>b
+Less: a<b
+equals: a==b
+not equal: a!=b
+Greaterorequal: a>=b
+lesserorequal: a<=b
+
+Object:
+
+eg: let obj = {
+    name: "Jai",
+    age: 22,
+    city: "Chennai"
+}
+console.log("Object:", obj);
+console.log("Name:", obj.name);
+console.log("Age:", obj.age);
+console.log("City:", obj.city);
+
+Array:
+
+let arr = [1, 3,"Hey", true, 5]
+let arr2 = [1, 2, 3, 4, 5]
