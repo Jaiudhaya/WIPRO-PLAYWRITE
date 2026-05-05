@@ -3,7 +3,7 @@ fetch("https://catfact.ninja/fact")
   .then(res=>res.json())
   .then(data=>{
   console.log(data)
-   const result = {
+  const result = {
      fact: data.fact,
      length: data.length,
      isLong: data.length > 50? "Yes" : "No"
@@ -11,7 +11,7 @@ fetch("https://catfact.ninja/fact")
   return result
 })
 .then(data=>console.log(data))
-.catch(err=>console.error(err));
+.catch(err=>console.error("Error:", err));
 
 //2 Dogs url
 fetch("https://dog.ceo/api/breeds/image/random/10")
@@ -27,10 +27,10 @@ fetch("https://api.agify.io/?name=arjun")
   .then(obj=>({
   name: obj.name,
   age: obj.age,
-  category: obj.age > 18? "Adult" : "Young"
+  category: obj.age >= 18? "Adult" : "Young"
 }))
   .then(console.log)
-  .catch(console.err);
+  .catch(console.error);
 
 //4 Genderize
 fetch("https://api.genderize.io/?name=riya")
@@ -41,7 +41,7 @@ fetch("https://api.genderize.io/?name=riya")
   IsItAShe: obj.gender === "female"
 }))
 .then(console.log)
-.catch(console.err);
+.catch(console.error);
 
 //5 Nationalize
 fetch("https://api.nationalize.io/?name=rahul")
@@ -50,14 +50,14 @@ fetch("https://api.nationalize.io/?name=rahul")
   .then(arr => arr.filter(c => c.probability > 0.1))
   .then(arr => arr.map(c => c.country_id))
   .then(console.log)
-  .catch(console.err);
+  .catch(console.error);
 
 //6 Joke API
 fetch("https://official-joke-api.appspot.com/jokes/ten")
   .then(r => r.json())
   .then(arr => arr.filter(j => j.type === "programming"))
   .then(console.log)
-  .catch(console.err)
+  .catch(console.error)
 
 //7 Numbers
 fetch("http://numbersapi.com/1/30/date?json")
@@ -67,7 +67,7 @@ fetch("http://numbersapi.com/1/30/date?json")
       length: obj.text.length
   }))
   .then(console.log)
-  .catch(console.err);
+  .catch(console.error);
 
 //8 Random User
 fetch("https://randomuser.me/api/?results=5")
@@ -75,7 +75,7 @@ fetch("https://randomuser.me/api/?results=5")
   .then(obj => obj.results)
   .then(arr => arr.map(u => `${u.name.first} ${u.name.last}`))
   .then(console.log)
-  .catch(console.err);
+  .catch(console.error);
 
 //9 Exchange Rate
 fetch("https://api.exchangerate-api.com/v4/latest/USD")
@@ -87,7 +87,7 @@ fetch("https://api.exchangerate-api.com/v4/latest/USD")
       isINRHigh: rates.INR > 80 ? "Yes" : "No"
   }))
   .then(console.log)
-  .catch(console.err);
+  .catch(console.error);
 
 //10 Universities
 fetch("http://universities.hipolabs.com/search?country=India")
@@ -95,7 +95,7 @@ fetch("http://universities.hipolabs.com/search?country=India")
   .then(arr => arr.filter(u => u.name.includes("Engineering")))
   .then(arr => arr.map(u => u.name))
   .then(console.log)
-  .catch(console.err);
+  .catch(console.error);
 
 
 
