@@ -46,3 +46,14 @@ PROMISE:
     -fetch() makes an API call, returns a Promise => fetch("https://jsonplaceholder.typicode.com/todos")
     -res = response from server
     -.json() converts it into usable JavaScript object (array) => .then(res => res.json())
+
+FETCH:
+    -used to get data from the internet (APIs) / Used to call APIs
+    -fetch() -> “Go to this URL and bring me the data”
+    -Always async (Promise-based)
+
+SYNTAX:
+fetch("URL")
+  .then(res => res.json())   // convert response to JSON
+  .then(data => console.log(data)) // use data
+  .catch(err => console.error(err)); // handle error
