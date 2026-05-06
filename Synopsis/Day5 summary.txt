@@ -62,6 +62,7 @@ OOP CONCEPTSSS:
 1.Inheritance:
 ~~~~~~~~~~~~~
     -One class (child) acquires properties and methods of another class (parent)
+    -*reuse properties and methods of parent class*
     -parent–child relationship between classes
     -reduces code duplication
     -code reusability
@@ -81,6 +82,7 @@ class user extends admin{ //child
 syntax:
 class bank{
     #balance=0;  //variable
+    ...
 }
 acc1=new bank();
 acc1.balance=200;  //not possible
@@ -88,6 +90,7 @@ acc1.balance=200;  //not possible
 3.Polymorphism:
 ~~~~~~~~~~~~~~~
     -'many forms'
+    -One method can have different behaviors based on the object
     -Same method behaves differently for different objects
     -Achieved through method overriding
     -Improves flexibility and scalability
@@ -107,7 +110,7 @@ abc.forEach(alphabet=>alphabet.fnc())
 
 4.Abstraction:
 ~~~~~~~~~~~~~~
-    -Hides internal implementation details
+    -*Hides internal implementation details*
     -Shows only essential features to the user
     -Reduces complexity
     -Focuses on what to do, not how it is done
