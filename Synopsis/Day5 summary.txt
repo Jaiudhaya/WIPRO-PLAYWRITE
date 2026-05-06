@@ -50,3 +50,81 @@ fetch(url)
 const res = await fetch(url);
 const data = await res.json();
 console.log(data);
+
+OOP CONCEPTSSS:
+~~~~~~~~~~~~~~~
+    -4 Pillars: (Makes code modular, reusable, secure, and maintainable)
+        ->Inheritance
+        ->Encapsulation
+        ->Polymorphism
+        ->Abstraction
+
+1.Inheritance:
+~~~~~~~~~~~~~
+    -One class (child) acquires properties and methods of another class (parent)
+    -parent–child relationship between classes
+    -reduces code duplication
+    -code reusability
+syntax:
+class admin{  //parent
+    ...
+}
+class user extends admin{ //child
+    ...
+}
+
+2.Encapsulation:
+~~~~~~~~~~~~~~~
+    -Wraps data and methods into a single unit (class)
+    -Uses private variables to restrict direct access -> #balance
+    -Improves data security and control
+syntax:
+class bank{
+    #balance=0;  //variable
+}
+acc1=new bank();
+acc1.balance=200;  //not possible
+
+3.Polymorphism:
+~~~~~~~~~~~~~~~
+    -'many forms'
+    -Same method behaves differently for different objects
+    -Achieved through method overriding
+    -Improves flexibility and scalability
+syntax:
+class alphabet{
+    fnc()
+    ...
+}
+class a extends alphabet{
+    ...
+}
+class b extends alphabet{
+    ...
+}
+const abc = [new a(),new b()]
+abc.forEach(alphabet=>alphabet.fnc())
+
+4.Abstraction:
+~~~~~~~~~~~~~~
+    -Hides internal implementation details
+    -Shows only essential features to the user
+    -Reduces complexity
+    -Focuses on what to do, not how it is done
+syntax:
+class abc {
+    ...
+  #stepOne() {
+    ...
+  }
+  #stepTwo() {
+    ...
+  }
+  Task() {
+    this.#stepOne();
+    this.#stepTwo();
+    console.log("Task completed!");
+  }
+}
+const obj = new abc();
+obj.Task();
