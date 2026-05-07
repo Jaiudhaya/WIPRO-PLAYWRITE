@@ -108,9 +108,9 @@ const filteredMovies = movies.filter(movie =>(movie.genre === "Action" || movie.
 filteredMovies.sort((a,b)=>b.views - a.views);
 console.log("Filtered Movies:");
 console.log(JSON.stringify(filteredMovies, null, 2));
-const result = JSON.stringify(filteredMovies, null, 2);
+const result1 = JSON.stringify(filteredMovies, null, 2);
 console.log("Final JSON Output:");
-console.log(result);
+console.log(result1);
 
 //The Automated Payroll Processor
 
