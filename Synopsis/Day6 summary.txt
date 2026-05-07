@@ -105,3 +105,16 @@ STEPS:
     -Computed total company payout
     -Displayed payroll summary -> template literals
     -Delayed final output -> setTimeout()
+
+PERSON:
+~~~~~~~
+    -Copy/Duplicate
+eg:
+function car(brand){
+    this.brand = brand;
+}
+car.prototype.drive = function(){  // drive function is injected into car function
+    console.log(this.brand, "is driving.");
+}
+const car1 = new car("BMW");
+car1.drive();
