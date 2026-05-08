@@ -7,20 +7,20 @@ b=temp;
 console.log("a:",a,"b:",b);
 
 //without
-let a = 12;
-let b = 16;
-a=a+b;
-b=a-b;
-a=a-b;
-console.log("a:",a,"b:",b);
+let a1 = 12;
+let b2 = 16;
+a1=a1+b2;
+b2=a1-b2;
+a1=a1-b2;
+console.log("a1:",a1,"b2:",b2);
 
 //Type Checker
 let input="Jai"
 function type(input){
     if (typeof(input)=="number"){
-        console.log("This is a number");
+        console.log(`${input} is a number`);
     }else if (typeof(input)=="string"){
-        console.log("This is a string");
+        console.log(`${input} is a string`);
     }else{
         console.log("Invalid");
     }

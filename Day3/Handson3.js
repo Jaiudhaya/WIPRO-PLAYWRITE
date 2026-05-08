@@ -1,5 +1,5 @@
 //1.Logging Names
-const names = ["Annie","Billie","Shamon"];
+const names = ["Annie","Billie","Shamone"];
 //using function
 names.forEach(function(name){
     console.log(`Hello, ${name}`);
@@ -22,11 +22,11 @@ const adults = users.filter(user=>user.age>=18);
 console.log(adults);
 
 //4.String Length
-const names = ["Annie","Billie","Shamon","Mike","Jack"];
+const names1 = ["Annie","Billie","Shamone","Mike","Jack"];
 function longNames(arr){
-    return names.filter(str=>str.length>5);
+    return names1.filter(str=>str.length>5);
 }
-console.log(longNames(names));
+console.log(longNames(names1));
 
 //5.Total cost
 const prices = [19.99, 5.50, 3.99, 25.00];
@@ -54,6 +54,7 @@ const title=products.map(name=>name.title);
 console.log(title);
 
 //9.The average
+let scores = [85, 90, 78, 92, 88];
 const average = scores.reduce((sum, score) => sum + score, 0) / scores.length;
 console.log(average);
 
