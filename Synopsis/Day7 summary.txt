@@ -1,0 +1,68 @@
+HOIST:
+~~~~~
+    -var: initialized but with undefined
+    -eg: // var greet; --> initialized -> undefined
+    -const/let: hoist not initialized (error message with "Not Defined error msg)
+    -eg: // let/const greet; --> not initialized -> not defined
+
+//console.log(greet); //undefined msg
+//var greet = "Hello, World!";
+//console.log(greet);
+
+//console.log(greet); //ReferenceError: Cannot access 'greet' before initialization --> let/const (hoist not initialized)
+//let greet = "Hello, World!";
+//console.log(greet);
+
+FUNCTON HOIST:
+~~~~~~~~~~~~~~
+sayHi();
+function sayHi() {
+console.log('Hello, World!');
+}
+//o/p: Hello, World!
+
+PROTOTYPE:
+~~~~~~~~~~
+
+car.prototype.drive = function()  // drive function is injected into car function
+
+EG:
+// Every object --> Object
+const car = {
+    brand: "Tesla",
+//    start: () => console.log("VroomVroom")
+}
+ 
+function start() {
+    console.log("VroomVroom...")
+}
+ 
+const c1 = new start();
+const c2 = new start();
+ 
+start.prototype.stop = function() {
+    console.log("Stop");
+}
+c1.stop();
+c2.stop();
+
+//O/P:  VroomVroom...
+        VroomVroom...
+        Stop
+        Stop
+ 
+// car {start} --> prototype {stop}
+// c1 --> start
+// c2 --> start
+// c1.stop();
+
+--> const abc = Object.create(ABC); // creates a new object abc with prototype ABC
+
+EG:
+const ABC = { HELLO: true };
+const abc = Object.create(ABC); // creates a new object abc with prototype ABC
+abc.hello = () => console.log("hello");
+console.log(abc.HELLO); // inherted from ABC //TRUE
+console.log(abc.hasOwnProperty('HELLO')) //FALSE
+console.log(abc.hasOwnProperty('hello')) //TRUE
+console.log(abc.toString()) //o/p: [object Object]

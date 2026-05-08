@@ -106,8 +106,8 @@ STEPS:
     -Displayed payroll summary -> template literals
     -Delayed final output -> setTimeout()
 
-PERSON:
-~~~~~~~
+PROTOTYPE:
+~~~~~~~~~~
     -Copy/Duplicate
 eg:
 function car(brand){
