@@ -1,0 +1,77 @@
+//SCOPS & HOISTING
+//3.closure behavior
+let sum = 0; // 2
+function f() {
+    function increment() {
+        sum++;
+        
+        function inner2() {
+            sum++;
+            console.log(sum);
+        }
+        return inner2();
+    }
+    return increment();
+}
+console.log(sum); // 0
+f();   //2
+console.log(sum); // 2
+
+
+//3.closure behavior
+function outer(){
+    let count = 0;
+    function inner(){
+        count++;
+        console.log(count);
+    }
+    return inner;
+}
+const counter = outer();
+counter(); //1
+counter(); //2
+
+
+//FUNCTIONS
+//5.calculator using functions for add, subtract, multiply, and divide
+const calc = {
+    sum: (...op) => op.reduce((acc, curr) => acc + curr, 0),
+   sub: (...op) => op.reduce((acc, curr) => acc - curr, 0),
+    mul: (...op) => op.reduce((acc, curr) => acc * curr, 1),
+    div: (...op) => op.reduce((acc, curr) => acc / curr, 1),
+};
+function calculator(operation, ...operands) {
+    return operation(...operands);
+}
+console.log(calculator(calc.sum, 1, 2, 3))
+
+//CALLBACK AND SETTIMEOUT
+//eg:
+function fnc(a,b,op){
+    console.log(op(a,b));
+}
+fnc(10,5,(x,y) => x+y);
+
+//3. call back based calculator
+function calculator(a,b,operation){
+    setTimeout(() => {
+        let result = operation(a,b);
+        console.log(`Result: ${result}`);
+    }, 1000);
+}
+function add(x,y){
+    return x+y;
+}
+function sub(x,y){
+    return x-y;
+}
+function mul(x,y){
+    return x*y;
+}
+function div(x,y){
+    return x/y;
+}
+calculator(10,5,add);
+calculator(10,5,sub);
+calculator(10,5,mul);
+calculator(10,5,div);

@@ -39,4 +39,15 @@ for (let i=2; i<=100; i++){
 }  
 
 //5.number guessing game.
-//idk:(
+//var prompt = require('prompt-sync')();
+//function random() {
+// //   return parseInt(prompt("Enter a number between 1 and 10: "));
+//}
+//const guessNum = Math.floor(Math.random()*10)+1;
+//console.log("Guess the number!");
+//const num1 = random();
+//if(guessNum === num1){
+//    console.log("Congratulations! You guessed the number.");
+//} else{
+//    console.log(`Sorry! The correct number was ${guessNum}.`);
+//}

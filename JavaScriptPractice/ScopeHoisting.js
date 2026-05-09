@@ -27,6 +27,26 @@ const counter = outer();
 counter(); //1
 counter(); //2
 
+//eg:
+let sum = 0; // 2
+function f() {
+    function increment() {
+        sum++;
+        
+        function inner2() {
+            sum++;
+            console.log(sum);
+        }
+        return inner2();
+    }
+    return increment();
+}
+console.log(sum); // 0
+f();   //2
+console.log(sum); // 2
+ 
+
+
 //4.Create nested functions and access outer variables.
 function outer1(){
     let name = "Annie";

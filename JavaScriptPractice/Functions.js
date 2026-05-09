@@ -10,6 +10,7 @@ function greatest(a,b,c){
 } 
 console.log(`Greatest: ${greatest(10,30,20)}`); //returns string
 console.log("Greatest:", greatest(5,15,10)); //returns number
+console.log("Greatest:", Math.max(10,30,20)); 
 
 //2.Palindrome check
 function isPalindrome(str){
@@ -54,3 +55,35 @@ console.log(`Addition: ${add(10,20)}`);
 console.log(`Subtraction: ${sub(10,20)}`);
 console.log(`Multiplication: ${mul(10,20)}`);
 console.log(`Division: ${div(10,20)}`);
+
+//
+const calc = {
+    add: (a,b) => a+b,
+    sub: (a,b) => a-b,
+    mul: (a,b) => a*b,  
+    div: (a,b) => a/b
+};
+console.log(calc.add(10,20));
+console.log(calc.sub(10,20));
+
+//
+const calc1 = {
+    sum: (...op) => op.reduce((acc, curr) => acc + curr, 0),
+    sub: (...op) => op.reduce((acc, curr) => acc - curr, 0),
+    mul: (...op) => op.reduce((acc, curr) => acc * curr, 1),
+    div: (...op) => op.reduce((acc, curr) => acc / curr, 1),
+};
+ 
+console.log(calc1.sum(5, 5, 10, 20));
+ 
+//const calc = {
+//    sum: (...op) => op.reduce((acc, curr) => acc + curr, 0),
+//   sub: (...op) => op.reduce((acc, curr) => acc - curr, 0),
+//    mul: (...op) => op.reduce((acc, curr) => acc * curr, 1),
+//    div: (...op) => op.reduce((acc, curr) => acc / curr, 1),
+//};
+//function calculator(operation, ...operands) {
+//    return operation(...operands);
+//}
+//console.log(calculator(calc.sum, 1, 2, 3))
+ 
