@@ -38,17 +38,4 @@ for (let i=2; i<=100; i++){
     } 
 }  
 
-//5.number guessing game with const number and do-while loop
-const random = Math.floor(Math.random()*100)+1;
-let guess;
-do {
-    let input = 50;
-    guess = parseInt(input);
-    if(guess < random){
-        console.log("Too low! Try again.");
-    } else if(guess > random){
-        console.log("Too high! Try again.");
-    } else {
-        console.log("Congratulations! You guessed the number.");
-    }
-} while (guess !== random);
+//5.number guessing game.
