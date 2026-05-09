@@ -39,3 +39,4 @@ for (let i=2; i<=100; i++){
 }  
 
 //5.number guessing game.
+//idk:(
