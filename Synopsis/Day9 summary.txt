@@ -1,0 +1,29 @@
+//DEFAULT PARAMETER
+function greet(name = "Guest") {   --> default (means if no parameter mentioned --> default params will be taken)
+    console.log(`Welcome ${name}!`);
+}
+
+greet("Jai") //Welcome Jai
+greet("Udhaya") //Welcome Udhaya
+greet() // Welcome Guest
+
+//SPREAD OPERATOR
+const num = [1, 2, 3, 4, 5]; 
+const newNum = [...num, 6, 7, 8];  //...num adds/joins
+console.log(newNum);
+
+// DECONSTRUCTOR
+ 
+ normal way:
+const arr = ["Aryan", "Arush", "Vivek", "Rohit"];
+const first = arr[0];
+const second = arr[1];
+const third = arr[2];
+const fourth = arr[3];
+
+deconstructor:
+const [first, second, third] = ["Jai", "Udhaya", "Annie"]; // // position-based extraction
+console.log(first, second, third);
+
+const { name, age } = {name: "Jai", age: 22}; // key-based extracted
+console.log(name, age);
