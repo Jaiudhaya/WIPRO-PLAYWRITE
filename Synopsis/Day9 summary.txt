@@ -76,3 +76,15 @@ const numberBag: Bag<number> = { content: 6 };
 console.log(stringBag, numberBag);
 
 O/P: { content: 'Book' } { content: 6 }
+
+GENERICS WITH CONSTRAINTS:
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+    -restrict what types a generic can accept
+    -entends keyword
+syntax:
+function getLength<T extends { length: number }>(item: T): number {
+  return item.length;
+}
+O/P:
+getLength("hello");     // string has length
+getLength([1, 2, 3]);  // array has length
