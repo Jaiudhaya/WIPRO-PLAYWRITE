@@ -27,3 +27,52 @@ console.log(first, second, third);
 
 const { name, age } = {name: "Jai", age: 22}; // key-based extracted
 console.log(name, age);
+
+INTERFACE & ENUM:
+~~~~~~~~~~~~~~~~
+    -Declaration without body
+    -(not initialization)
+syntax:
+interface person {
+    name: string;
+    role: Role; //enum
+    isAdmin?: boolean; // optional property ?
+}
+enum Role{
+    Admin = "ADMIN",
+    User = "USER",
+    Guest = "GUEST"
+}
+const person1: person = {
+    id: 1,
+    name: "Diana",
+    age: 25,
+    role: Role.Admin,
+}
+const person2: person = {
+    name: "Annie",
+    role: Role.User,
+}
+console.log(person1, person2);
+
+TUPLE:
+~~~~~~
+    -specific types [num, num] or [num, str]
+Syntax:
+let nums: [number, number] = [1, 2];
+console.log(nums);
+
+let user: [number, string] = [1, "Diana"];
+console.log(user);
+
+GENERICS:
+~~~~~~~~~
+    -function returns the same type it receives
+interface Bag<T> {
+    content: T;
+} 
+const stringBag: Bag<string> = { content: "Book" };
+const numberBag: Bag<number> = { content: 6 };
+console.log(stringBag, numberBag);
+
+O/P: { content: 'Book' } { content: 6 }
