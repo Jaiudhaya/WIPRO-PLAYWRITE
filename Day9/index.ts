@@ -82,4 +82,15 @@ names.addItem("Diana");
 names.addItem("Annie");
 names.addItem("Lily");
 console.log(names.getItem(0), names.getItem(1), names.getItem(2));
- 
+
+//GENERICS WITH CONSTRAINTS: (entends keyword)
+interface HasLength{
+    length: number;
+}
+function logLength<T extends HasLength>(arg: T): void {
+    console.log(arg.length);
+}
+logLength("Hello");  //string has length
+logLength("Hello world");
+logLength([1, 2, 3, 4]);  //array has length
+//logLength(10);  //number has no length
