@@ -6,6 +6,7 @@ a=b;
 b=temp;
 console.log("a:",a,"b:",b);
 
+
 //without
 let a1 = 12;
 let b2 = 16;
