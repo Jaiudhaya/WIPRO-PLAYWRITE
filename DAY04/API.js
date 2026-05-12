@@ -96,6 +96,7 @@ fetch("http://universities.hipolabs.com/search?country=India")
   .then(arr => arr.map(u => u.name))
   .then(console.log)
   .catch(console.error);
+  
 
 
 
