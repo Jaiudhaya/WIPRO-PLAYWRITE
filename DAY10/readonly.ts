@@ -10,7 +10,7 @@ const myTask1: Task = {
     title: "Do Homework",
     completed: true
 }
-myTask.completed = false;
+myTask1.completed = false;
 
 console.log(myTask);
 console.log(myTask1);

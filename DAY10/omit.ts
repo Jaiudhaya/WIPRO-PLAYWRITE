@@ -4,7 +4,7 @@ interface User {
     email: string;
     password: string;
 }
-type UserPreviw = Omit<User, "email" | "password">
+type UserPreview = Omit<User, "email" | "password">
 const preview: UserPreview = {
     name: "Jai",
     id: "xyz"
