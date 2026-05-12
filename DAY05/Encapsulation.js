@@ -32,6 +32,7 @@ Acc2.withdraw(100);
 Acc2.withdraw(200);
 console.log(`Final Balance: $${Acc2.getBalance()}`);
 
+
 //Another eg
 class passManager{
     #password="";
