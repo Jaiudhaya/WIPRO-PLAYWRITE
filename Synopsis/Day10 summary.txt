@@ -1,0 +1,13 @@
+TYPESCRIPT CONCEPTS:
+~~~~~~~~~~~~~~~~~~~~
+
+PARTIAL:
+    -Makes all properties optional
+
+READONLY:
+    -Makes all properties read-only (cannot modify)
+
+OMIT<T, K>:
+    -Removes specific keys from a type
+
+Required<T> (opposite of Partial)
