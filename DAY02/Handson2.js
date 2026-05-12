@@ -30,3 +30,4 @@ let sum=(arr)=>{
 }
 let total=sum(numbers);
 console.log(`Total Price: ${total}`);
+
