@@ -139,10 +139,10 @@ function safeExecute<T>(fn: () => Promise<T>): () => Promise<T | null> {
         }
     };
 }
-async function fetchData(): Promise<string> {
+async function FetchData(): Promise<string> {
     return "Success data";
 }
-const safeFetch = safeExecute(fetchData);
+const safeFetch = safeExecute(FetchData);
 
 safeFetch().then(result => {
     console.log(result);
