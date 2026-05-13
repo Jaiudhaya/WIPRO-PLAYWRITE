@@ -1,0 +1,41 @@
+HANDS-ON QUESTIONS:
+~~~~~~~~~~~~~~~~~~
+1.Generic API Wrapper:
+    -generics <T> to create reusable, type safe API func
+    -ensures response data matches expected structure at complie time
+
+2.Record Mapping:
+    -Record<K,V> enforces all keys in a union/enum are mapped
+    -missing any key results in a ts error
+
+3.Exhaustiveness checking:
+    -never ensures all union cases are handled in a switch
+    -adding new types forces code updates (complie time safety)
+
+4.Recursive types:
+    -a types can reference itself for nested structures
+    -useful for trees like folders, mesnus, or hierarchies
+
+5.Template literal types:
+    -restrict string formats using patterns like `${number}px`
+    -enforces strict values formats at compile time
+
+6.Conditional types+infer
+    -extract types dynamically using T extends ... ? ... : ...
+    -infer helps pull inner types (eg: from Promise<T>)
+
+7.Union manipulation:
+    -Extract picks specific types from a Union
+    -Exclude removes unwanted types from a union
+
+8.Async higher order function:
+    -wrap async function to handle errors centrally
+    -returns safe fallback (null) instead of crashing
+
+9.Index signatures:
+    -allows dynamic object keys with controlled values types
+    -ensures all additional properties follow a defined type
+
+10.Mapped types + key remapping:
+    -transdform object using mapped types
+    -can rename keys dynamically (eg preffx + uppercase)
