@@ -1,5 +1,6 @@
 // @ts-check
 import { defineConfig, devices } from '@playwright/test';
+import path from 'path';
 
 /**
  * Read environment variables from file.
@@ -73,10 +74,11 @@ export default defineConfig({
   ],
 
   /* Run your local dev server before starting the tests */
-  // webServer: {
-  //   command: 'npm run start',
-  //   url: 'http://localhost:3000',
-  //   reuseExistingServer: !process.env.CI,
-  // },
+ webServer: {
+  cwd: `${path.resolve(process.cwd())}/webapp`,
+  command: 'node index.js',
+  url: 'http://localhost:3000',
+  reuseExistingServer: !process.env.CI,
+ },
 });
 
