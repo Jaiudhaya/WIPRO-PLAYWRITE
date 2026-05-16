@@ -1,0 +1,23 @@
+SCREENSHOT & ES MODULES(.mjs extention):
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+1.Login Application:
+    -Rebuilt login page 
+    -handled user inputs, validation and response flow
+    -integration between frontend, backend and testing
+
+2.Screenshot capture:
+    - Failed Evidence capture
+    -implemented automatic screenshot capture when a test case fails
+    -captured full login page state to help debug issues
+
+3.ES modules(.mjs extension):
+    -use of ES modules with .mjs extention instead of commonJs
+    -used import and export syntax for modular structure
+    -difference between require vs import and modern JS practice
+
+    > require(''), module.exports --> old method
+    > .mjs --> import, export --> ES6 version
+
+    > 1 function to export --> export default sum;
+    > exports 2 or more (ie) export sum, sub; --> module.exports = {sum, sub};
